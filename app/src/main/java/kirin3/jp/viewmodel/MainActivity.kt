@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         // アクティビティに属するカウンター
         var counterA = 0
 
-        // 何度も使いまわされるインスタンスを作成
+        // インスタンスを作成
         val viewModel: CountViewModel = ViewModelProviders.of(this).get(CountViewModel::class.java)
 
         val text1 = findViewById(R.id.text1) as TextView
