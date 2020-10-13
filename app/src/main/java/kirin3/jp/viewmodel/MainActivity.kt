@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         // arch.lifecycle.ViewModelProvidersは最新版では非推奨なので修正する必要あり
         val viewModel: CountViewModel = ViewModelProviders.of(this).get(CountViewModel::class.java)
 
+        // 画面作成時に変数の値をlayoutにセット
+        text1.text = counterA.toString()
+        text2.text = viewModel.counterB.toString()
+
         // ボタンを押すとカウントアップ
         button.setOnClickListener {
             counterA++
